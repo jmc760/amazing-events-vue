@@ -1,0 +1,88 @@
+body>footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #57d1c9;
+    padding: 5vh 0;
+    gap: 3vh;
+    border-top: 3px solid #202020;
+}
+
+body>footer>div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+}
+
+@media only screen and (min-width:1080px) {
+    body>footer>div {
+        width: 65vw;
+        flex-grow: 1;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+body>footer nav {
+    width: 65vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media only screen and (min-width:768px) {
+    body>footer nav {
+        justify-content: center;
+        gap: 5vw;
+    }
+}
+
+@media only screen and (min-width:1080px) {
+    body>footer nav {
+        width: fit-content;
+        gap: 5vw;
+    }
+}
+
+body>footer nav img {
+    width: 15vw;
+}
+
+@media only screen and (min-width:576px) {
+    body>footer nav img {
+        width: 12vw;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    body>footer nav img {
+        width: 10vw;
+    }
+}
+
+@media only screen and (min-width:1080px) {
+    body>footer nav img {
+        width: 6vw;
+    }
+}
+
+.cohort{
+    font-family: 'Knewave', cursive;
+    color: #202020;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+small {
+    width: 80vw;
+    text-align: center;
+    font-size: smaller;
+}
+
+

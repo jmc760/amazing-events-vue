@@ -1,0 +1,56 @@
+main,
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    margin: 5vh 0;
+    align-items: center;
+}
+
+form {
+    align-items: flex-start;
+    gap: 5px;
+    padding: 5vh;
+    background-image: linear-gradient(to top right, #B39DDB, #9575CD);
+    border-radius: 20px;
+    border: 2px solid #202020;
+}
+
+label {
+    color: #ffe869;
+    font-weight: 700;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+input,
+textarea {
+    width: 50vw;
+    border: 1px solid #202020;
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    height: 4vh;
+}
+
+@media only screen and (min-width: 1080px) {
+    input{
+        height: 5vh;
+    }
+}
+
+textarea {
+    height: 15vh;
+}
+
+button {
+    align-self: flex-end;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #202020;
+    border-radius: 5px;
+    box-shadow: inset -2px -2px 3px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,35 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 7.5vh 5vh;
+}
+
+table {
+    background-color: #fafafa;
+    border: 2px solid #202020;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    width: 90vw;
+}
+
+th {
+    font-size: 15px;
+    padding: 10px 5px;
+    text-align: start;
+    font-weight: 700;
+    border: 1px solid #202020;
+}
+
+.caption {
+    padding: 20px 5px;
+    color: #fafafa;
+    background-color: #ed5485;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 2px solid #202020;
+}
+
+td {
+    padding: 3px 5px;
+    border: 1px solid #202020;
+}

@@ -1,0 +1,84 @@
+main,
+article,
+article>div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+main {
+    margin: 7.5vh 5vh;
+    justify-content: center;
+}
+
+article {
+    justify-content: space-evenly;
+    gap: 5vw;
+    width: 95vw;
+    height: fit-content;
+    padding: 50px;
+    background-color: #fafafa;
+    border-radius: 20px;
+    border: 2px solid #202020;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+}
+
+@media only screen and (min-width: 768px) {
+    article {
+        width: fit-content;
+    }
+}
+
+article img {
+    min-height: 200px;
+    width: 200px;
+    object-fit: cover;
+    filter: contrast(120%) drop-shadow(-5px -5px 4px rgba(0, 0, 0, 0.4));
+    border: 2px solid #202020;
+}
+
+article>div {
+    justify-content: center;
+    min-height: 200px;
+    min-width: 300px;
+    padding: 20px;
+    background-image: linear-gradient(#D7CB66, #ffe869);
+    border: #202020 1px solid;
+    filter: contrast(120%) drop-shadow(-5px -5px 4px rgba(0, 0, 0, 0.4));
+}
+
+@media only screen and (min-width: 576px) {
+
+    article img,
+    article div {
+        width: 400px;
+        min-height: 250px;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+
+    article img,
+    article div {
+        width: 400px;
+        min-height: 300px;
+    }
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 10px 0 25px 0;
+}
+
+div > div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 0 2vw;
+}
+
+.description {
+    font-weight: 700;
+}
+
