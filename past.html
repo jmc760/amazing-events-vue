@@ -38,44 +38,34 @@
         </section>
     </header>
     <main>
-        <form method="get">
-            <fieldset class="grid-2col">
-                <label for="category1">
-                    <input type="checkbox" name="category" id="Food" value="category1"
-                        class="checks">
-                    Food Fair</label>
-                <label for="category2">
-                    <input type="checkbox" name="category" id="Museum" value="category2"
-                        class="checks">
-                    Museum</label>
-                <label for="category3">
-                    <input type="checkbox" name="category" id="Party" value="category3"
-                        class="checks">
-                    Costume Party</label>
-                <label for="category4">
-                    <input type="checkbox" name="category" id="Concert" value="category4"
-                        class="checks">
-                    Music Concert</label>
-                <label for="category5">
-                    <input type="checkbox" name="category" id="Race" value="category5"
-                        class="checks">
-                    Race</label>
-                <label for="category6">
-                    <input type="checkbox" name="category" id="Books" value="category6"
-                        class="checks">
-                    Book Exchange</label>
-                <label for="category7">
-                    <input type="checkbox" name="category" id="Cinema" value="category7"
-                        class="checks">
-                    Cinema</label>
-            </fieldset>
-            <fieldset>
-                <input type="text" name="search" id="search" value="">
-                <button class="float" type="submit"><img src="assets/img/magnifying_glass.svg"
-                        alt="search-icon"></button>
-            </fieldset>
-        </form>
-        <div id="cards-section"></div>
+        <div id="app">
+            <form method="get">
+                <fieldset class="grid-2col">
+                    <label v-if="categories" v-for="category of categories" :for="category">
+                        <input type="checkbox" :name="category" :id="category" class="checks">
+                        {{category}}</label>
+                </fieldset>
+                <fieldset>
+                    <input type="text" name="search" id="search" value="">
+                    <button class="float" type="submit"><img src="assets/img/magnifying_glass.svg"
+                            alt="search-icon"></button>
+                </fieldset>
+            </form>
+            <div v-if="events" v-for="event of events">
+                <article class="card">
+                    <img class="badge" src="assets/img/leaves.svg" alt="Past Event Badge">
+                    <figure>
+                        <img v-bind:src="event.image" class="article-image" :alt="event.name">
+                    </figure>
+                    <h2>{{event.name}}</h2>
+                    <p>{{event.description}}</p>
+                    <footer>
+                        <p class="price">${{event.price}}</p>
+                        <a href="">Ver más</a>
+                    </footer>
+                </article>
+            </div>
+        </div>
     </main>
     <footer>
         <div>
@@ -103,6 +93,8 @@
             Freepik - Flaticon
         </small>
     </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="scripts/past.js"></script>
 </body>
 <!-- Juan Manuel Cerdeira -->
 
