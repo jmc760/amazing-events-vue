@@ -30,7 +30,34 @@
         </nav>
     </header>
     <main>
-        <div id="card-section"></div>
+        <div id="app">
+            <article v-if="event.response">
+                <figure>
+                    <img v-bind:src="event.response.image" alt="event.name">
+                </figure>
+                <div>
+                    <h2>{{event.response.name}}</h2>
+                    <div>
+                        <p class="description">Date:</p>
+                        <p>{{event.response.date}}</p>
+                        <p class="description">Description:</p>
+                        <p>{{event.response.description}}</p>
+                        <p class="description">Category:</p>
+                        <p>{{event.response.category}}</p>
+                        <p class="description">Place:</p>
+                        <p>{{event.response.place}}</p>
+                        <p class="description">Capacity:</p>
+                        <p>{{event.response.capacity}}</p>
+                        <p v-if="event.response.assistance" class="description">Assistance:</p>
+                        <p v-if="event.response.assistance">{{event.response.assistance}}</p>
+                        <p v-if="event.response.estimate" class="description">Estimate:</p>
+                        <p v-if="event.response.estimate">{{event.response.estimate}}</p>
+                        <p class="description">Price:</p>
+                        <p>{{event.response.price}}</p>
+                    </div>
+                </div>
+            </article>
+        </div>
     </main>
     <footer>
         <div>
@@ -58,6 +85,8 @@
             Freepik - Flaticon
         </small>
     </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="scripts/details.js"></script>
 </body>
 <!-- Juan Manuel Cerdeira -->
 

@@ -62,7 +62,7 @@
                     <p>{{event.description}}</p>
                     <footer>
                         <p class="price">${{event.price}}</p>
-                        <a href="">Ver más</a>
+                        <a v-bind:href="'./details.html?id='+event.id">Ver más</a>
                     </footer>
                 </article>
             </div>
