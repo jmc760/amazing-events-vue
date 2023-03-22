@@ -42,16 +42,17 @@
             <form method="get">
                 <fieldset class="grid-2col">
                     <label v-if="categories" v-for="category of categories" :for="category">
-                        <input type="checkbox" :name="category" :id="category" class="checks">
+                        <input v-model="checks" v-on:change="filterData()" type="checkbox" :name="category"
+                            :id="category" :value="category" class="checks">
                         {{category}}</label>
                 </fieldset>
                 <fieldset>
-                    <input type="text" name="search" id="search" value="">
+                    <input v-model="text" v-on:keyup="filterData()" type="text" name="search" id="search">
                     <button class="float" type="submit"><img src="assets/img/magnifying_glass.svg"
                             alt="search-icon"></button>
                 </fieldset>
             </form>
-            <div v-if="events" v-for="event of events">
+            <div v-if="capturedData.length" v-for="event of capturedData">
                 <article class="card">
                     <img class="badge" src="assets/img/leaves.svg" alt="Past Event Badge">
                     <figure>
@@ -63,6 +64,12 @@
                         <p class="price">${{event.price}}</p>
                         <a href="">Ver más</a>
                     </footer>
+                </article>
+            </div>
+            <div v-else="capturedData">
+                <article class="notFound">
+                    <h2>Not found</h2>
+                    <p>:(</p>
                 </article>
             </div>
         </div>
