@@ -38,15 +38,17 @@
         </section>
     </header>
     <main>
-        <form method="get">
+        <div id="app">
+            <form method="get">
                 <label for="name">Name:</label>
-                <input type="text" name="contact" id="name" value="">
+                <input v-model="name" type="text" name="contact" id="name">
                 <label for="email">E-mail:</label>
-                <input type="text" name="contact" id="email" value="">
+                <input v-model="email" type="text" name="contact" id="email">
                 <label>Message:</label>
-                <textarea name="contact" id="message"></textarea>
-            <button>Submit</button>
-        </form>
+                <textarea v-model="message" name="contact" id="message"></textarea>
+                <input type="button" v-on:click="captureData()" class="submit-button" value="Submit">
+            </form>
+        </div>
     </main>
     <footer>
         <div>
@@ -74,6 +76,9 @@
             Freepik - Flaticon
         </small>
     </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="scripts/contact.js"></script>
 </body>
 <!-- Juan Manuel Cerdeira -->
+
 </html>

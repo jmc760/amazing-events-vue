@@ -46,9 +46,8 @@ textarea {
     height: 15vh;
 }
 
-button {
-    align-self: flex-end;
-    padding: 10px;
+.submit-button {
+    height: 50px;
     cursor: pointer;
     border: 1px solid #202020;
     border-radius: 5px;
