@@ -38,38 +38,45 @@
         </section>
     </header>
     <main>
-        <table>
-            <tbody id="tbody1">
-                <tr>
-                    <th class="caption" colspan="3">Event Statistics</th>
-                </tr>
-                <tr>
-                    <th>Events with the highest percentage of attendance</th>
-                    <th>Events with the lowest percentage of attendance</th>
-                    <th>Event with large capacity</th>
-                </tr>
-            </tbody>
-            <tbody id="tbody2">
-                <tr>
-                    <th class="caption" colspan="3">Upcoming events statistics by category</th>
-                </tr>
-                <tr>
-                    <th>Categories</th>
-                    <th>Revenue</th>
-                    <th>Percentage of attendance</th>
-                </tr>
-            </tbody>
-            <tbody id="tbody3">
-                <tr>
-                    <th class="caption" colspan="3">Past events statistics by category</th>
-                </tr>
-                <tr>
-                    <th>Categories</th>
-                    <th>Revenue</th>
-                    <th>Percentage of attendance</th>
-                </tr>
-            </tbody>
-        </table>
+        <div id="app">
+            <table>
+                <tbody id="tbody1">
+                    <tr>
+                        <th class="caption" colspan="3">Event Statistics</th>
+                    </tr>
+                    <tr>
+                        <th>Events with the highest percentage of attendance</th>
+                        <th>Events with the lowest percentage of attendance</th>
+                        <th>Event with large capacity</th>
+                    </tr>
+                    <tr>
+                        <td>{{highestAttendance}}</td>
+                        <td>{{lowestAttendance}}</td>
+                        <td>{{largestCapacity}}</td>
+                    </tr>
+                </tbody>
+                <tbody id="tbody2">
+                    <tr>
+                        <th class="caption" colspan="3">Upcoming events statistics by category</th>
+                    </tr>
+                    <tr>
+                        <th>Categories</th>
+                        <th>Revenue</th>
+                        <th>Percentage of attendance</th>
+                    </tr>
+                </tbody>
+                <tbody id="tbody3">
+                    <tr>
+                        <th class="caption" colspan="3">Past events statistics by category</th>
+                    </tr>
+                    <tr>
+                        <th>Categories</th>
+                        <th>Revenue</th>
+                        <th>Percentage of attendance</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
     <footer>
         <div>
@@ -97,6 +104,9 @@
             Freepik - Flaticon
         </small>
     </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="scripts/stats.js"></script>
 </body>
 <!-- Juan Manuel Cerdeira -->
+
 </html>
